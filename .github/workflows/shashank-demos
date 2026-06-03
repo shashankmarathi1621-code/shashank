@@ -1,0 +1,7 @@
+def move(n,src,dest,temp):
+    if n>=1:
+        move(n-1,src,temp,dest)
+        print("move {} -> {}".format(src,dest))
+        move(n-1,temp,dest,src)
+num=int(input("enter number of disks   "))
+move(num,1,3,2)
